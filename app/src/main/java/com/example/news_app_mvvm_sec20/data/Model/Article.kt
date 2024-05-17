@@ -9,8 +9,8 @@ import java.io.Serializable
 @Entity(tableName = "articles") //Read News from database: Room table
 data class Article(
     //----------Room DB
-    @PrimaryKey
-    val id:Int?=null,
+    @PrimaryKey(autoGenerate = true)
+    val id:Int?=0,
     
     //----------Model
     @SerializedName("author")
